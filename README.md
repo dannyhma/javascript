@@ -1,3 +1,3 @@
-## javascript
+# javascript
 
-### learning javascript from dicoding
+## learning javascript from dicoding
