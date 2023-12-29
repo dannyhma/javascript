@@ -68,12 +68,12 @@
 //   }
 // }
 
-const students = {
-  Olivia: 20,
-  Liam: 13,
-  Emma: 40,
-  Noah: 18,
-};
+// const students = {
+//   Olivia: 20,
+//   Liam: 13,
+//   Emma: 40,
+//   Noah: 18,
+// };
 
 // for (let student in students) {
 //   console.log(`${student} memiliki skor ${students[student]}`);
@@ -88,15 +88,40 @@ const students = {
 
 // console.log("Average score:", total / scores.length);
 
-function lamarKerja() {
-  const jabatan = "Programmer";
+// function lamarKerja() {
+//   const jabatan = "Programmer";
 
-  function orangDalam() {
-    let kenalan = `Orang dalam bisa menjadi ${jabatan}`;
-    console.log(kenalan);
+//   function orangDalam() {
+//     let kenalan = `Orang dalam bisa menjadi ${jabatan}`;
+//     console.log(kenalan);
+//   }
+
+//   orangDalam();
+// }
+
+// lamarKerja();
+
+// function duaKali(func) {
+//   func();
+//   func();
+// }
+
+// function lemparDadu() {
+//   const hasil = Math.floor(Math.random() * 6) + 1;
+//   console.log(hasil);
+// }
+
+// duaKali(lemparDadu);
+
+function hasilnyaFunction() {
+  const rand = Math.random();
+  if (rand > 0.1) {
+    return function () {
+      console.log('Selamat, angkanya lebih besar');
+    };
+  } else {
+    return function () {
+      console.log('Maaf, mungkin bisa coba lagi');
+    };
   }
-
-  orangDalam();
 }
-
-lamarKerja();
