@@ -113,15 +113,70 @@
 
 // duaKali(lemparDadu);
 
-function hasilnyaFunction() {
-  const rand = Math.random();
-  if (rand > 0.1) {
-    return function () {
-      console.log('Selamat, angkanya lebih besar');
-    };
-  } else {
-    return function () {
-      console.log('Maaf, mungkin bisa coba lagi');
-    };
+// function hasilnyaFunction() {
+//   const rand = Math.random();
+//   console.log(rand);
+//   if (rand > 0.1) {
+//     return function () {
+//       console.log('Selamat, angkanya lebih besar');
+//     };
+//   } else {
+//     return function () {
+//       console.log('Maaf, mungkin bisa coba lagi');
+//     };
+//   }
+// }
+
+// const result = hasilnyaFunction();
+
+// result();
+
+// function myFun() {
+//   // function biasa
+//   console.log('Hi');
+//   return 'Hello';
+// }
+
+// myFun();
+
+// const myMath = {
+//   // object
+//   perkalian: function (x, y) {
+//     // method
+//     return x * y;
+//   },
+// };
+
+// console.log(myMath.perkalian(12, 5));
+
+// const saya = {
+//   nama: 'Danny',
+//   hobi: 'Gaming',
+//   kenalan: function () {
+//     return `Hi, saya ${this.nama}, Hobi saya ${this.hobi}`;
+//   },
+// };
+
+// saya.nama = 'Dziki';
+// console.log(saya.kenalan());
+
+// try {
+//   saya.kenalan();
+// } catch {
+//   console.log('error!!');
+// }
+
+// // saya.kenalan();
+// console.log('Setelah proses try and catch');
+
+function teriak(msg) {
+  try {
+    console.log(msg.toUpperCase());
+  } catch (error) {
+    console.log(error);
+    console.log('Silahkan masukkan tipe data string pada argument teriak()');
   }
 }
+
+// teriak(123);
+teriak('Taksi');
