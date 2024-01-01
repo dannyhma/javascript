@@ -25,7 +25,11 @@ const user = {
   name: 'John',
   email: 'john@example.com',
 };
-console.log(user);
 
-const newUser = { ...user, id: 123, password: 'password' };
+const credentials = {
+  password: 'password',
+  token: 'dadfajfoaj34014910fkaffakf123',
+};
+
+const newUser = { ...user, ...credentials, role: 'Admin' };
 console.log(newUser);
