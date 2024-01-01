@@ -14,3 +14,9 @@ const angka = [1, 2, 3, 4, 5];
 
 const max = Math.max(...angka);
 console.log(max);
+
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const name = ['Alexander', 'John', 'Doe', 'Thomas', 'George', 'Smith', 'Jeff'];
+
+const numName = [...name, ...number];
+console.log(numName);
