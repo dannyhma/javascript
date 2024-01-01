@@ -77,9 +77,41 @@ const user = {
   name: 'John',
   email: 'john@example.com',
   password: 'password',
+  role: 'admin',
 };
 
-const { name: nama, email, password, phone = '08123456789' } = user;
+// const { name: nama, email, password, phone = '08123456789' } = user;
 
-console.log(`Nama: ${nama}`);
-console.log(`Phone: ${phone}`);
+// console.log(`Nama: ${nama}`);
+// console.log(`Phone: ${phone}`);
+
+const userAndRole = ({ name, role }) => {
+  return `Name: ${name}\nRole: ${role}`;
+};
+
+console.log(userAndRole(user));
+
+const animes = [
+  {
+    title: 'Attack on Titan',
+    rating: 82,
+  },
+  {
+    title: 'One Piece',
+    rating: 95,
+  },
+  {
+    title: 'Naruto',
+    rating: 93,
+  },
+  {
+    title: 'Bleach',
+    rating: 85,
+  },
+];
+
+const anime = animes.map(({ title, rating }) => {
+  return `Title: ${title} - Rating: ${rating}`;
+});
+
+console.log(anime);
