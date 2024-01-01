@@ -50,11 +50,25 @@ console.log(sumAll(1, 2, 3, 4));
 
 const name = ['Alexander', 'John', 'Doe', 'Thomas', 'George', 'Smith', 'Jeff'];
 
-const winner = (gold, silver, bronze, ...sisa) => {
-  console.log(`Gold: ${gold}`);
-  console.log(`Silver: ${silver}`);
-  console.log(`Bronze: ${bronze}`);
-  console.log(`Sisanya: ${sisa}`);
-};
+// const winner = (gold, silver, bronze, ...peserta) => {
+//   console.log(`Gold: ${gold}`);
+//   console.log(`Silver: ${silver}`);
+//   console.log(`Bronze: ${bronze}`);
+//   console.log(`Peserta: ${peserta}`);
+// };
 
-winner(...name);
+// winner(...name);
+
+// const [gold, silver, bronze, ...peserta] = name;
+
+// console.log(`Gold: ${gold}`);
+// console.log(`Silver: ${bronze}`);
+// console.log(`Bronze: ${silver}`);
+// console.log(`Peserta: ${peserta}`);
+
+const peserta = ['Batman', 'Ironman', 'Spiderman', 'Superman'];
+// const [satu, dua, tiga] = peserta;
+
+const [juara, ...sisa] = peserta;
+console.log(`Juara: ${juara}`);
+console.log(`Peserta: ${sisa}`);
