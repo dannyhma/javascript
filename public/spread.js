@@ -40,15 +40,15 @@
 
 // console.log(sumAll(1, 2, 3, 4, 5, 6));
 
-function sumAll(...nums) {
-  let total = 0;
-  for (let n of nums) total += n;
-  return total;
-}
+// function sumAll(...nums) {
+//   let total = 0;
+//   for (let n of nums) total += n;
+//   return total;
+// }
 
-console.log(sumAll(1, 2, 3, 4));
+// console.log(sumAll(1, 2, 3, 4));
 
-const name = ['Alexander', 'John', 'Doe', 'Thomas', 'George', 'Smith', 'Jeff'];
+// const name = ['Alexander', 'John', 'Doe', 'Thomas', 'George', 'Smith', 'Jeff'];
 
 // const winner = (gold, silver, bronze, ...peserta) => {
 //   console.log(`Gold: ${gold}`);
@@ -66,9 +66,20 @@ const name = ['Alexander', 'John', 'Doe', 'Thomas', 'George', 'Smith', 'Jeff'];
 // console.log(`Bronze: ${silver}`);
 // console.log(`Peserta: ${peserta}`);
 
-const peserta = ['Batman', 'Ironman', 'Spiderman', 'Superman'];
+// const peserta = ['Batman', 'Ironman', 'Spiderman', 'Superman'];
 // const [satu, dua, tiga] = peserta;
 
-const [juara, ...sisa] = peserta;
-console.log(`Juara: ${juara}`);
-console.log(`Peserta: ${sisa}`);
+// const [juara, ...sisa] = peserta;
+// console.log(`Juara: ${juara}`);
+// console.log(`Peserta: ${sisa}`);
+
+const user = {
+  name: 'John',
+  email: 'john@example.com',
+  password: 'password',
+};
+
+const { name: nama, email, password, phone = '08123456789' } = user;
+
+console.log(`Nama: ${nama}`);
+console.log(`Phone: ${phone}`);
