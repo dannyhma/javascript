@@ -1,7 +1,18 @@
+#container {
+  text-align: center;  
+}
+
 .pokemon {
   display: inline-block;
   text-align: center;
+  background-color: #0a8bb3;
+  margin: 4px;
+  border-radius: 12px;
 }
 .pokemon img {
   display: block;
+}
+
+h1 {
+  text-align: center;
 }
