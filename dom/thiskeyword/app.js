@@ -17,6 +17,7 @@ for (let heading of headings) {
 }
 
 function colorize() {
+  this.innerText = generateRandomColor();
   this.style.backgroundColor = generateRandomColor();
   this.style.color = generateRandomColor();
 }
