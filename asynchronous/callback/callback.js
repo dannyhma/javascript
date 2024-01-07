@@ -1,38 +1,35 @@
-const requestCallback = (url, success, failure) => {
-  const delay = Math.floor(Math.random() * 4500) + 500;
-  setTimeout(() => {
-    if (delay > 4000) {
-      failure('Error: Connection Timeout');
-    } else {
-      success(`Success: ${url} (${delay}ms)`);
-    }
-  }, delay);
-};
+// console.log('Pertama');
+// setTimeout(() => {
+//   console.log('3 Detik');
+// }, 3000);
+// console.log('Kedua');
 
-requestCallback(
-  'movie.com',
-  function (response) {
-    console.log('Success', response);
-    requestCallback(
-      'movie.com',
-      function (response) {
-        console.log('Success', response);
-        requestCallback(
-          'movie.com',
-          function (response) {
-            console.log('Success', response);
-          },
-          function (error) {
-            console.log('Error', error);
-          }
+// setTimeout(function () {
+//   document.body.style.backgroundColor = 'red';
+//   setTimeout(function () {
+//     document.body.style.backgroundColor = 'yellow';
+//   }, 1000);
+// }, 1000);
+
+serchMovieApi(
+  'naruto',
+  function (movies) {
+    saveToMyDb(
+      movies,
+      function () {
+        // kalau berhasil simpan
+        filteringMovie(
+          movies,
+          () => {},
+          () => {}
         );
       },
-      function (error) {
-        console.log('Error', error);
+      () => {
+        // kalau gagal coba lagi
       }
     );
   },
-  function (error) {
-    console.log('Error', error);
+  () => {
+    // server error coba lagi
   }
 );
