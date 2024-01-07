@@ -7,7 +7,7 @@ const requestPromise = (url) => {
       } else {
         resolve(`Success: ${url} (${delay}ms)`);
       }
-    });
+    }, delay);
   });
 };
 

@@ -6,7 +6,7 @@ const requestCallback = (url, success, failure) => {
     } else {
       success(`Success: ${url} (${delay}ms)`);
     }
-  });
+  }, delay);
 };
 
 requestCallback(
