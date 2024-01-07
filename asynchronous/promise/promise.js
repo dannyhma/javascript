@@ -33,20 +33,31 @@ const requestPromise = (url) => {
 //     console.log('Error', error);
 //   });
 
-requestPromise('movie.com')
-  .then((response) => {
-    console.log('Page 1');
-    console.log(response);
-    return requestPromise('movie.com');
-  })
-  .then(() => {
-    console.log('Page 2');
-    return requestPromise('movie.com');
-  })
-  .then(() => {
-    console.log('Page 3');
-    return requestPromise('movie.com');
-  })
-  .catch((err) => {
-    console.log(err);
+// requestPromise('movie.com')
+//   .then((response) => {
+//     console.log('Page 1');
+//     console.log(response);
+//     return requestPromise('movie.com');
+//   })
+//   .then(() => {
+//     console.log('Page 2');
+//     return requestPromise('movie.com');
+//   })
+//   .then(() => {
+//     console.log('Page 3');
+//     return requestPromise('movie.com');
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+const promiseExample = () => {
+  return new Promise((resolve, reject) => {
+    resolve(() => {
+      // 'berhasil';
+    });
+    reject(() => {
+      // 'gagal';
+    });
   });
+};
