@@ -18,7 +18,7 @@ const delayedColorChange = (color, delay) => {
 //   .then(() => delayedColorChange('yellow', 1000))
 //   .then(() => delayedColorChange('green', 1000));
 
-const colorSequence = ['red', 'yellow', 'green'];
+const colorSequence = ['red', 'yellow', 'green', 'blue'];
 
 const repeatColorChange = (index) => {
   if (index < colorSequence.length) {
