@@ -3,7 +3,9 @@ const images = document.getElementById('images');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  document.querySelectorAll('img, p').forEach((element) => element.remove());
+  document
+    .querySelectorAll('#images img, #images p, #images div')
+    .forEach((element) => element.remove());
   const keyword = form.elements.query.value;
   const config = {
     params: {
