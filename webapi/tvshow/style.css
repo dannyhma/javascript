@@ -1,0 +1,9 @@
+.container {
+    margin-top: 16px;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
